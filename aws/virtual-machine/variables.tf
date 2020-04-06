@@ -7,5 +7,6 @@ variable "instance_type" {
 }
 
 variable "var1" {
+  type = string
   default = ""
 }
