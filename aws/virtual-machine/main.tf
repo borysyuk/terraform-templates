@@ -15,6 +15,20 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"]
 }
 
+resource "random_id" "server" {
+  keepers = {
+    # Generate a new id each time we switch to a new AMI id
+    ami_id = "${var.ami_id}"
+  }
+
+  byte_length = 8
+}
+
+resource "null_resource" "example" {
+  provisioner "local-exec" {
+    command = "echo test"
+  }
+}
 
 resource "aws_instance" "terraform-test-instance" {
   ami             = "${data.aws_ami.ubuntu.id}"
