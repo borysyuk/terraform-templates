@@ -4,6 +4,10 @@ resource "null_resource" "example" {
   }
 }
 
+variable "image_id" {
+  type = string
+}
+
 resource "random_pet" "cat" {
 }
 
