@@ -8,6 +8,11 @@ variable "image_id" {
   type = string
 }
 
+variable "password" {
+  type = string
+  sensitive = true
+}
+
 resource "random_pet" "cat" {
 }
 
