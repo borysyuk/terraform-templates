@@ -23,6 +23,7 @@ resource "random_pet" "cheetah" {
 }
 
 resource "random_pet" "horse" {
+  count = 5
 }
 
 resource "random_pet" "zebra" {
