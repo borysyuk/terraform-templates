@@ -25,7 +25,7 @@ resource "random_pet" "cheetah" {
 }
 
 resource "random_pet" "horse" {
-  count = 5
+  count = 9
 }
 
 resource "random_pet" "zebra" {
