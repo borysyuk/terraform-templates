@@ -18,17 +18,8 @@ variable "password" {
 resource "random_pet" "cat" {
 }
 
-resource "random_pet" "dog" {
-}
-
-resource "random_pet" "cheetah" {
-}
-
 resource "random_pet" "horse" {
   count = 9
-}
-
-resource "random_pet" "zebra" {
 }
 
 output "instance_ip_addr1" {
