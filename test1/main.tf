@@ -33,6 +33,6 @@ output "instance_ip_addr2" {
 }
 
 module "module2" {
-	source  = "mainiacp.ihor-24516.testenv.scalr.dev/env-svrcnchebt61e30/module2/git"
+	source  = "mainiacp.ihor-24516.testenv.scalr.dev/acc-svrcncgh453bi8g/module2/git"
 	version = "1.0.2"
 }
