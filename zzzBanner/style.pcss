@@ -1,0 +1,56 @@
+.banner {
+    display: flex;
+    border-radius: tvar(--banner-border-radius);
+    background-color: var(--background-color);
+    justify-content: space-between;
+    align-items: center;
+
+    &.small {
+        padding: tvar(--banner-small-padding);
+        line-height: tvar(--banner-small-line-height);
+        --icon-size: tvar(--banner-small-icon-size);
+        --icon-gab: tvar(--banner-small-icon-gap);
+        --body-container-padding: tvar(--body-container-small-padding);
+    }
+
+    &.info {
+        --background-color: tvar(--banner-info-background-color);
+        --icon-color: tvar(--banner-info-icon-color);
+    }
+    &.success {
+        --background-color: tvar(--banner-success-background-color);
+        --icon-color: tvar(--banner-success-icon-color);
+    }
+    &.warning {
+        --background-color: tvar(--banner-warning-background-color);
+        --icon-color: tvar(--banner-warning-icon-color);
+    }
+    &.error {
+        --background-color: tvar(--banner-error-background-color);
+        --icon-color: tvar(--banner-error-icon-color);
+    }
+
+    .icon {
+        fill: var(--icon-color);
+        width: var(--icon-size);
+        height: var(--icon-size);
+        padding-right: var(--icon-gab);
+        box-sizing: content-box;
+    }
+
+    .actions {
+        display: block;
+        padding-left: tvar(--banner-actions-padding-left);
+    }
+
+    .bodyContainer {
+        padding: var(--body-container-padding);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .infoContainer {
+        display: block;
+    }
+}
