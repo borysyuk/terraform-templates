@@ -9,7 +9,7 @@ terraform {
 
 provider scalr {
   hostname = "mainiacp.ihor-20203.testenv.scalr.dev"
-  token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ1c2VyIiwianRpIjoiYXQtdGsyNGhqY2U5cHRtN3VnIn0.U176hkJfV-Is4ZJNppwcObnemoogqxasu0RSMO4zj4o"
+  token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ1c2VyIiwianRpIjoiYXQtdjBvMG1hMGIwM3JiZTA0bWQifQ.GLmlpCMRuyQPkO3SZRwm_ss9AFjYDswBSkaaaU7Iisw"
 }
 
 resource "scalr_workspace" "ws1" {
