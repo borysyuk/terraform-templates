@@ -6,13 +6,11 @@ resource "null_resource" "example" {
 
 variable "image_id" {
   type = string
-  default="222"
 }
 
 variable "password" {
   type = string
   sensitive = true
-  default="pass"
 }
 
 resource "random_pet" "cat" {
