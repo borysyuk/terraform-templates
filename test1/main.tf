@@ -15,6 +15,9 @@ variable "password" {
   default="pass"
 }
 
+resource "random_pet" "cat22" {
+}
+
 resource "random_pet" "cat" {
 }
 
