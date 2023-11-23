@@ -13,6 +13,21 @@ variable "docker_ports" {
   ]
 }
 
+variable "docker_ports2" {
+  type = list(object({
+    internal2 = number
+    external2 = number
+    protocol2 = string
+  }))
+  default = [
+    {
+      internal2 = 8300
+      external2 = 8300
+      protocol2 = "tcp"
+    }
+  ]
+}
+
 resource "null_resource" "check_ip" {
   triggers = {
     current_time = timestamp()
