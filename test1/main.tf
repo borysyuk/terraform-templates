@@ -13,6 +13,9 @@ variable "password" {
   sensitive = true
 }
 
+resource "random_pet" "cat22" {
+}
+
 resource "random_pet" "cat" {
 }
 
