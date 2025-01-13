@@ -1,3 +1,7 @@
+terraform {
+  required_version = "~> 1.10.4"
+}
+
 resource "null_resource" "example" {
   provisioner "local-exec" {
     command = "echo test"
