@@ -7,15 +7,6 @@ terraform {
   }
 }
 
-resource "vault_auth_backend" "example" {
-  type = "github"
-
-  tune {
-    max_lease_ttl      = "90000s"
-    listing_visibility = "unauth"
-  }
-}
-
 provider scalr {
   hostname = "mainiacp.ihor-master.testenv.scalr.dev"
   token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzY2Fscjp1c2VyIiwianRpIjoiYXQtdjBvbTc1b3Y5NmJoNDRnc2gifQ.vpM1u4f48X2Gr9FeOCu7hMW7PAwrXRiRvjTLO5Ncayg"
