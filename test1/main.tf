@@ -1,7 +1,3 @@
-terraform {
-  required_version = "~> 1.10.4"
-}
-
 resource "null_resource" "example" {
   provisioner "local-exec" {
     command = "echo test"
@@ -21,7 +17,7 @@ resource "random_pet" "cat" {
 }
 
 resource "random_pet" "horse" {
-  count = 9
+  count = 23
 }
 
 output "instance_ip_addr1" {
