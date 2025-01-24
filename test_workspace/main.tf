@@ -54,14 +54,3 @@ resource "scalr_iam_team" "example" {
   description = "Developers"
   account_id  = "acc-svrcncgh453bi8g"
 }
-
-resource "scalr_webhook" "example1" {
-  name         = "my-webhook-1"
-  enabled      = false
-  url          = "https://webhook.site/44a86047-6f28-4362-a2fd-8187880554f7"
-  secret_key   = "my-secret-key1my-Secret-key2my-secret-Key3my-secret-key4My-secret-key5"
-  timeout      = 15
-  max_attempts = 3
-  events       = ["run:completed", "run:errored"]
-  environments = ["env-svrcnchebt61e30"]
-}
