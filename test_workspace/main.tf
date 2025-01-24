@@ -58,7 +58,7 @@ resource "scalr_iam_team" "example" {
 resource "scalr_webhook" "example1" {
   name         = "my-webhook-1"
   enabled      = true
-  url          = "https://my-endpoint.url"
+  url          = "https://example.com"
   secret_key   = "my-secret-key1my-Secret-key2my-secret-Key3my-secret-key4My-secret-key5"
   timeout      = 15
   max_attempts = 3
