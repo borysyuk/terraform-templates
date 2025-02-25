@@ -56,7 +56,7 @@ resource "scalr_iam_team" "example" {
 }
 
 resource "scalr_run_schedule_rule" "example" {
-  schedule      = "0 4 * * *"
+  schedule      = "0 5 * * *"
   schedule_mode = "apply"
   workspace_id  = "ws-v0om7692t1es2dtsc"
 }
