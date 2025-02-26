@@ -14,7 +14,7 @@ variable "password" {
 }
 
 resource "time_offset" "example" {
-  offset_days = 8
+  offset_days = 9
 }
 
 resource "time_rotating" "example2" {
