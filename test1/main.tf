@@ -18,7 +18,7 @@ resource "time_offset" "example" {
 }
 
 resource "time_rotating" "example2" {
-  rotation_days = 31
+  rotation_days = 32
 }
 
 resource "null_resource" "previous" {}
