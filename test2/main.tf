@@ -4,15 +4,6 @@ resource "null_resource" "example" {
   }
 }
 
-variable "image_id" {
-  type = string
-}
-
-variable "password" {
-  type = string
-  sensitive = true
-}
-
 resource "random_pet" "cat" {
 }
 
@@ -23,14 +14,14 @@ resource "random_pet" "cheetah" {
 }
 
 resource "random_pet" "horse" {
-  count = 10000
+  count = 100
 }
 
 resource "random_pet" "zebra" {
 }
 
 output "instance_ip_addr1" {
-  value       = "192.168.0.1"
+  value       = "192.168.0.100"
   description = "The private IP address of the main server instance."
 }
 
