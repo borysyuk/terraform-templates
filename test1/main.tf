@@ -29,9 +29,16 @@ resource "time_sleep" "wait_30_seconds" {
   create_duration = "20s"
 }
 
+resource "time_sleep" "wait_40_seconds" {
+  depends_on = [null_resource.previous]
+
+  create_duration = "40s"
+}
+
 resource "time_static" "example23" {}
 
 resource "random_pet" "cat" {
+  count = 10
 }
 
 resource "random_pet" "horse" {
