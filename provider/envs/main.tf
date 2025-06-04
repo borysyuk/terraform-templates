@@ -12,7 +12,7 @@ variable "env_count" {
 }
 
 resource "scalr_environment" "test" {
-  name = "env-from-provider-${count.index}" 
+  name = "weenv-from-provider-${count.index}" 
   account_id = "acc-svrcncgh453bi8g"
   count = var.env_count
 }
