@@ -11,7 +11,7 @@ variable "env_count" {
   sensitive = false
 }
 
-data "scalr_environment" "test" {
+resource "scalr_environment" "test" {
   name = "env-from-provider-${count.index}" 
   account_id = "acc-svrcncgh453bi8g"
   count = var.env_count
