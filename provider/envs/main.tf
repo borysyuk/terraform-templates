@@ -23,7 +23,7 @@ resource "scalr_environment" "test1" {
   count = var.env_count
 }
 
-resource "scalr_environment" "test1" {
+resource "scalr_environment" "test2" {
   name = "denv-from-provider-${count.index}" 
   account_id = "acc-svrcncgh453bi8g"
   count = var.env_count
