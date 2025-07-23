@@ -22,7 +22,7 @@ resource "scalr_environment" "test1" {
 }
 
 resource "scalr_environment" "test2" {
-  name = "denv-from-provider-${count.index}" 
+  name = "denv2-from-provider-${count.index}" 
   count = var.env_count
 }
 
