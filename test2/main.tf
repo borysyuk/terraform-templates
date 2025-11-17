@@ -10,7 +10,7 @@ resource "random_pet" "cat" {
 resource "random_pet" "dog" {
 }
 
-resource "random_pet" "cheetah" {
+resource "random_pet" "cheetah2" {
 }
 
 resource "random_pet" "horse" {
