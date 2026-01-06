@@ -19,6 +19,6 @@ variable "count_number" {
   sensitive = false
 }
 
-variable "github_vcs_tocken" {
+variable "github_vcs_token" {
   sensitive = true
 }
