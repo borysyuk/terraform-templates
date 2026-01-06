@@ -18,3 +18,7 @@ count = var.count_number
 variable "count_number" {
   sensitive = false
 }
+
+variable "github_vcs_tocken" {
+  sensitive = true
+}
