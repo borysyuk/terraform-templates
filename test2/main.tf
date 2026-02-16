@@ -29,3 +29,49 @@ output "instance_ip_addr2" {
   value       = "192.168.0.2"
   description = "The private IP2 address of the main server instance."
 }
+output "instance_ip_addr3" {
+  value       = "192.168.0.1"
+  description = "The private IP address of the main server instance."
+}
+
+output "instance_ip_addr4" {
+  value       = "192.168.0.1"
+  description = "The private IP address of the main server instance."
+}
+output "instance_ip_addr5" {
+  value       = "192.168.0.1"
+  description = "The private IP address of the main server instance."
+}
+
+output "instance_ip_addr6" {
+  value       = "192.168.0.1"
+  description = "The private IP address of the main server instance."
+}
+output "instance_ip_addr7" {
+  value       = "192.168.0.1"
+  description = "The private IP address of the main server instance."
+}
+output "instance_ip_addr8" {
+  value       = "192.168.0.1"
+  description = "The private IP address of the main server instance."
+}
+output "instance_ip_addr9" {
+  value       = "192.168.0.1"
+  description = "The private IP address of the main server instance."
+}
+output "instance_ip_addr10" {
+  value       = "192.168.0.1"
+  description = "The private IP address of the main server instance."
+}
+output "instance_ip_addr11" {
+  value       = "192.168.0.1"
+  description = "The private IP address of the main server instance."
+}
+output "instance_ip_addr12" {
+  value       = "192.168.0.1"
+  description = "The private IP address of the main server instance."
+}
+output "instance_ip_addr13" {
+  value       = "192.168.0.1"
+  description = "The private IP address of the main server instance."
+}
