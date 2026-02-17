@@ -21,7 +21,7 @@ resource "random_pet" "zebra" {
 }
 
 output "instance_ip_addr1" {
-  value       = "192.168.0.1"
+  value       = "192.168.0.1 The private IP address of the main server instance. The private IP address of the main server instance. The private IP address of the main server instance. The private IP address of the main server instance. The private IP address of the main server instance. The private IP address of the main server instance. The private IP address of the main server instance. The private IP address of the main server instance. The private IP address of the main server instance. The private IP address of the main server instance."
   description = "The private IP address of the main server instance."
 }
 
