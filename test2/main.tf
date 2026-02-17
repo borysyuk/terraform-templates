@@ -81,6 +81,60 @@ output "vm_details" {
     data = {
       value       = "192.168.0.1"
       description = "The private IP address of the main server instance."
+        altvalue = {
+          instance_id   = "test"
+          private_ip    = "192.168.0.1"
+          instance_type = "demo"
+          data = {
+            value       = "192.168.0.1"
+            description = "The private IP address of the main server instance."
+                    altvalue = {
+          instance_id   = "test"
+          private_ip    = "192.168.0.1"
+          instance_type = "demo"
+          data = {
+            value       = "192.168.0.1"
+            description = "The private IP address of the main server instance."
+                    altvalue = {
+          instance_id   = "test"
+          private_ip    = "192.168.0.1"
+          instance_type = "demo"
+          data = {
+            value       = "192.168.0.1"
+            description = "The private IP address of the main server instance."
+                    altvalue = {
+          instance_id   = "test"
+          private_ip    = "192.168.0.1"
+          instance_type = "demo"
+          data = {
+            value       = "192.168.0.1"
+            description = "The private IP address of the main server instance."
+                    altvalue = {
+          instance_id   = "test"
+          private_ip    = "192.168.0.1"
+          instance_type = "demo"
+          data = {
+            value       = "192.168.0.1"
+            description = "The private IP address of the main server instance."
+                    altvalue = {
+          instance_id   = "test"
+          private_ip    = "192.168.0.1"
+          instance_type = "demo"
+          data = {
+            value       = "192.168.0.1"
+            description = "The private IP address of the main server instance."
+          }
+        }
+          }
+        }
+          }
+        }
+          }
+        }
+          }
+        }
+          }
+        }
     }
   }
 }
