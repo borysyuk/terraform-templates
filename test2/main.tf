@@ -71,6 +71,20 @@ output "instance_ip_addr12" {
   value       = "192.168.0.1"
   description = "The private IP address of the main server instance."
 }
+
+output "vm_details" {
+  description = "A structured object containing key details of the web VM"
+  value = {
+    instance_id   = "test"
+    private_ip    = "192.168.0.1"
+    instance_type = "demo"
+    data = {
+      value       = "192.168.0.1"
+      description = "The private IP address of the main server instance."
+    }
+  }
+}
+
 output "instance_ip_addr13" {
   value       = "192.168.0.1"
   description = "The private IP address of the main server instance."
