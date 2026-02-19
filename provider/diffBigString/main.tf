@@ -17,3 +17,4 @@ resource "scalr_provider_configuration" "kubernetes" {
       description = "The hostname (in form of URI) of the Kubernetes API."
     }
   }
+}
