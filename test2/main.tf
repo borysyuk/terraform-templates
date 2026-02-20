@@ -11,7 +11,7 @@ resource "random_pet" "dog" {
 }
 
 resource "random_pet" "horse" {
-  count = 351
+  count = 13510
 }
 
 resource "random_pet" "zebra" {
