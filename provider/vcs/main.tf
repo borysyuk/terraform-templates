@@ -12,7 +12,7 @@ count = var.count_number
   name     = "vcs_provider-${count.index}"
   vcs_type = "github"
   token    = var.github_vcs_token
-  environments = ["env-v0ord4r0sthdi9es5"]
+  environments = ["env-v0p6255nghlgmrvqd", "env-v0p6255ttogi7b6me", "env-v0p62563g0gr80e94", "env-v0ord4r0sthdi9es5", ]
 }
 
 
