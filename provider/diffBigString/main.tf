@@ -8,6 +8,8 @@ terraform {
 }
 resource "scalr_provider_configuration" "kubernetes" {
   name       = "k8s"
+  secret = "(sensitive)[kIjXqo+id+K2Fg8GU0lmv3FiwhGopcKe31RaaN9tlPU=]"
+  //secret = "(sensitive)[tdyAsy7xbbX1pIkeLbCYiJdeg3mwxJM36r+Pa5qM6rY=]"
   custom {
     provider_name = "kubernetes"
     argument {
