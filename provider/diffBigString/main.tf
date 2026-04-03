@@ -87,5 +87,6 @@ export const ObjectNode = (props: ObjectNodeType) => {
     );
 };
 EOT
+        }
     }
 }
