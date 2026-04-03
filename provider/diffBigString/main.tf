@@ -9,8 +9,8 @@ terraform {
 
 locals {
   tags = {
-    env  = null
-    team = null
+    env  = []
+    team = {}
   }
 }
 
@@ -64,7 +64,6 @@ export const ObjectNode = (props: ObjectNodeType) => {
 
                     <DiffLine action={action}>
                         <Offset deep={deep}>
-// DEMO
                             <Colorizer type={type}>{'}'}</Colorizer>
                         </Offset>
                     </DiffLine>
