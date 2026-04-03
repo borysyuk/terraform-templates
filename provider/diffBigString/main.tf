@@ -12,13 +12,13 @@ resource "scalr_provider_configuration" "kubernetes" {
     provider_name = "kubernetes"
     argument {
         name = "demoArray"
-        value = null
-        #value = []
+        #value = null
+        value = []
     }
     argument {
         name = "demoObject"
-        value = null
-        #value = {}
+        #value = null
+        value = {}
     }
     argument {
         name = "longText"
@@ -62,6 +62,7 @@ export const ObjectNode = (props: ObjectNodeType) => {
 
                     <DiffLine action={action}>
                         <Offset deep={deep}>
+// DEMO
                             <Colorizer type={type}>{'}'}</Colorizer>
                         </Offset>
                     </DiffLine>
