@@ -23,6 +23,15 @@ resource "scalr_provider_configuration" "kubernetes" {
         #value = "(sensitive)[kIjXqo+id+K2Fg8GU0lmv3FiwhGopcKe31RaaN9tlPU=]"
         value  = "(sensitive)[tdyAsy7xbbX1pIkeLbCYiJdeg3mwxJM36r+Pa5qM6rY=]"
     }
+  }
+}
+
+
+resource "scalr_provider_configuration" "kubernetes" {
+  name       = "k8s"
+
+  custom {
+    provider_name = "kubernetes2"
     argument {
         name = "longText"
         value = <<EOT
