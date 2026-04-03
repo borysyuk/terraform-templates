@@ -6,20 +6,22 @@ terraform {
         }
     }
 }
+
+locals {
+  tags = {
+    env  = null
+    team = null
+  }
+}
+
+resource "null_resource" "tags_test" {
+  triggers = local.tags
+}
+
 resource "scalr_provider_configuration" "kubernetes" {
   name       = "k8s"
   custom {
     provider_name = "kubernetes"
-    argument {
-        name = "demoArray"
-        #value = null
-        value = []
-    }
-    argument {
-        name = "demoObject"
-        #value = null
-        value = {}
-    }
     argument {
         name = "longText"
         value = <<EOT
