@@ -7,17 +7,6 @@ terraform {
     }
 }
 
-locals {
-  tags = {
-    env  = []
-    team = {}
-  }
-}
-
-resource "null_resource" "tags_test" {
-  triggers = local.tags
-}
-
 resource "scalr_provider_configuration" "kubernetes" {
   name       = "k8s"
   custom {
@@ -93,5 +82,8 @@ EOT
       value       = "https://kubernetes.io/flyscan1/hyperspectral/hydrocarbon-detection-quantification/cpp/argus:0.11.0-rc4@sha256:096e5910715111c60af9d804a455471b626c20ded014bb226c7947decd81d07c"
       description = "The hostname (in form of URI) of the Kubernetes API."
     }
+    argument = "text"
+    value = "(sensitive)[kIjXqo+id+K2Fg8GU0lmv3FiwhGopcKe31RaaN9tlPU=]"
+    #value  = "(sensitive)[tdyAsy7xbbX1pIkeLbCYiJdeg3mwxJM36r+Pa5qM6rY=]"
   }
 }
