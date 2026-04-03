@@ -27,7 +27,7 @@ resource "scalr_provider_configuration" "kubernetes" {
 }
 
 
-resource "scalr_provider_configuration" "kubernetes" {
+resource "scalr_provider_configuration" "kubernetes2" {
   name       = "k8s"
 
   custom {
