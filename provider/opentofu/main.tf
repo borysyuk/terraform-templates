@@ -39,9 +39,9 @@ import {
   to = scalr_workspace.import
 }
 
-removed {
-  from = scalr_workspace.forget
-  lifecycle {
-    destroy = false
-  }
-}
+#removed {
+#  from = scalr_workspace.forget
+#  lifecycle {
+#    destroy = false
+#  }
+#}
