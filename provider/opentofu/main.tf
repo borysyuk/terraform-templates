@@ -14,15 +14,15 @@ data "scalr_environment" "playground" {
   name = var.name
 }
 
-resource "scalr_workspace" "development" {
+resource "scalr_workspace" "dev" {
   name = "development-moved"
   environment_id = data.scalr_environment.playground.id
 }
 
-resource "scalr_workspace" "forget" {
-  name = "to-forget"
-  environment_id = data.scalr_environment.playground.id
-}
+#resource "scalr_workspace" "forget" {
+#  name = "to-forget"
+#  environment_id = data.scalr_environment.playground.id
+#}
 
 resource "scalr_workspace" "import" {
   environment_id = data.scalr_environment.playground.id
@@ -30,8 +30,8 @@ resource "scalr_workspace" "import" {
 }
 
 moved {
-  from = scalr_workspace.dev
-  to   = scalr_workspace.development
+  from = scalr_workspace.development
+  to   = scalr_workspace.dev
 }
 
 import {
@@ -39,9 +39,9 @@ import {
   to = scalr_workspace.import
 }
 
-#removed {
-#  from = scalr_workspace.forget
-#  lifecycle {
-#    destroy = false
-#  }
-#}
+removed {
+  from = scalr_workspace.forget
+  lifecycle {
+    destroy = false
+  }
+}
