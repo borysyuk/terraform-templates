@@ -91,9 +91,10 @@ output "instance_ip_addr2" {
 output "instance_data" {
   value       = {
     address = "test"
-    host = "google.com"
-    ping = 50
-    ips = ["192.168.0.1", "192.168.0.2", "192.168.0.3", "192.168.0.4", "192.168.0.5"]
+    host = "google.com2"
+    ping = 504
+    ips = ["192.168.0.1", "192.168.0.2", "192.168.0.5", "localhost"]
+    name = "Yey"
   }
   description = "The private IP2 address of the main server instance."
 }
