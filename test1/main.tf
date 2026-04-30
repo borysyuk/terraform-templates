@@ -79,11 +79,21 @@ resource "random_uuid" "test" {
 }
 
 output "instance_ip_addr1" {
-  value       = "192.168.0.1"
+  value       = "192.168.0.100"
   description = "The private IP address of the main server instance."
 }
 
 output "instance_ip_addr2" {
   value       = "192.168.0.2"
+  description = "The private IP2 address of the main server instance."
+}
+
+output "instance_data" {
+  value       = {
+    address = "test"
+    host = "google.com"
+    ping = 50
+    ips = ["192.168.0.1", "192.168.0.2", "192.168.0.3", "192.168.0.4", "192.168.0.5"]
+  }
   description = "The private IP2 address of the main server instance."
 }
