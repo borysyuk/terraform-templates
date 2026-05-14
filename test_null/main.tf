@@ -67,4 +67,5 @@ resource "scalr_variable" "example1" {
   category     = "terraform"
   description  = "variable description"
   workspace_id = "ws-v0om7692t1es2dtsc"
+  desc = "superlong1superlong2superlong3superlong3superlong4superlong5superlong6superlong7superlong8superlong9superlongAsuperlongBsuperlongCsuperlongDDECS"
 }
