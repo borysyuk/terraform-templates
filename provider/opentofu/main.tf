@@ -29,13 +29,13 @@ resource "scalr_workspace" "import" {
   name = "test-20"
 }
 
-moved {
-  from = scalr_workspace.dev
-  to   = scalr_workspace.development
-}
+#moved {
+#  from = scalr_workspace.dev
+#  to   = scalr_workspace.development
+#}
 
 import {
-  id = "ws-v0p6f6158qicie1t6"
+  id = "ws-v0p96l3m0mrd33j50"
   to = scalr_workspace.import
 }
 
