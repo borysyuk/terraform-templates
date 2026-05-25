@@ -35,7 +35,7 @@ resource "scalr_workspace" "import" {
 #}
 
 import {
-  id = "ws-v0p96l3m0mrd33j50"
+  id = "ws-v0p9a8qgc59fv6kl6"
   to = scalr_workspace.import
 }
 
