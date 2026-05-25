@@ -24,10 +24,10 @@ resource "scalr_workspace" "development" {
 #  environment_id = data.scalr_environment.playground.id
 #}
 
-#resource "scalr_workspace" "import2" {
-#  environment_id = data.scalr_environment.playground.id
-#  name = "test-20"
-#}
+resource "scalr_workspace" "import" {
+  environment_id = data.scalr_environment.playground.id
+  name = "test-20"
+}
 
 #moved {
 #  from = scalr_workspace.dev
@@ -36,7 +36,7 @@ resource "scalr_workspace" "development" {
 
 import {
   id = "ws-v0p96l3m0mrd33j50"
-  to = scalr_workspace.import2
+  to = scalr_workspace.import
 }
 
 removed {
