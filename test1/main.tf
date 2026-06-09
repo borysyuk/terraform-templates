@@ -14,7 +14,7 @@ variable "password" {
 }
 
 resource "time_offset" "example" {
-  offset_days = 16
+  offset_days = 15
 }
 
 resource "time_rotating" "example2" {
@@ -29,12 +29,19 @@ resource "time_sleep" "wait_30_seconds" {
   create_duration = "20s"
 }
 
+resource "time_sleep" "wait_40_seconds" {
+  depends_on = [null_resource.previous]
+
+  create_duration = "40s"
+}
+
 resource "time_static" "example23" {}
 
 resource "random_pet" "cat" {
+  count = 5
 }
 
-resource "random_pet" "horse" {
+resource "random_pet" "horse3" {
   count = 23
 }
 
@@ -58,7 +65,7 @@ resource "random_password" "password" {
 }
 
 resource "random_shuffle" "az" {
-  input        = ["us-west-1a", "us-west-1c", "us-west-1d", "us-west-1e"]
+  input        = ["us-west-1a22", "us-west-1c11", "us-west-1d", "us-west-1e"]
   result_count = 2
 }
 
@@ -72,11 +79,22 @@ resource "random_uuid" "test" {
 }
 
 output "instance_ip_addr1" {
-  value       = "192.168.0.1"
+  value       = "192.168.0.100"
   description = "The private IP address of the main server instance."
 }
 
 output "instance_ip_addr2" {
   value       = "192.168.0.2"
+  description = "The private IP2 address of the main server instance."
+}
+
+output "instance_data" {
+  value       = {
+    address = "test"
+    host = "google.com2"
+    ping = 504
+    ips = ["192.168.0.1", "192.168.0.2", "192.168.0.3", "localhost"]
+    name = "Yey"
+  }
   description = "The private IP2 address of the main server instance."
 }
