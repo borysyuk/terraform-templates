@@ -31,3 +31,9 @@ export_shell_variables = true
     workload_provider_name = "projects/269908363239/locations/global/workloadIdentityPools/vmotso/providers/vmotso-provider"
   }
 }
+
+resource "terraform_data" "uai" {
+  for_each = toset(["prd"])
+
+  input = each.key
+}
