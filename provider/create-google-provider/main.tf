@@ -20,7 +20,7 @@ resource "scalr_provider_configuration" "using_service_account_impersonation" {
 }
 */
 
-resource "scalr_provider_configuration" "google" {
+resource "scalr_provider_configuration" "google" {}
   name       = "google_main_244"
   account_id = "acc-svrcncgh453bi8g" #"acc-v0p9vf4vtp33j9mse" #"acc-v0p9u5ub1pjef6f2l"
 export_shell_variables = true
