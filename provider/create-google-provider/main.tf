@@ -26,7 +26,7 @@ resource "scalr_provider_configuration" "google" {
 export_shell_variables = true
   google {
     auth_type              = "oidc"
-    project                = "my-project"
+    project                = "my_project"
     service_account_email  = "scalr-service-account@development-156220.iam.gserviceaccount.com"
     workload_provider_name = "projects/269908363239/locations/global/workloadIdentityPools/vmotso/providers/vmotso-provider"
   }
