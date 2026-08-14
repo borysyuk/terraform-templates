@@ -66,17 +66,6 @@ export const ObjectNode = (props: ObjectNodeType) => {
         return String(value);
     };
 
-    if (!diff) {
-        return [
-            {
-                value: action === 'add' ? currentText : previousText,
-                added: false,
-                removed: false,
-                count: 1,
-            },
-        ];
-    }
-
     const expanderRenderer = (expanded: boolean) => (
         <>
             {!isEmpty(value) && expanded && (
