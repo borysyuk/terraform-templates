@@ -14,8 +14,8 @@ resource "scalr_provider_configuration" "kubernetes" {
     provider_name = "kubernetes"
     argument {
       name        = "host"
-      #value       = "https://kubernetes.io/flyscan1/hyperspectral/hydrocarbon-detection-quantification/cpp/0.11.0-rc4@sha256:096e5910715111c60af9d804a455471b626c20ded014bb226c7947decd81d07c"
-      value       = "https://kubernetes.io/flyscan1/hyperspectral/hydrocarbon-detection-quantification/cpp/argus:0.11.0-rc4@sha256:096e5910715111c60af9d804a455471b626c20ded014bb226c7947decd81d07c"
+      value       = "https://kubernetes.io/flyscan1/hyperspectral/hydrocarbon-detection-quantification/cpp/0.11.0-rc4@sha256:096e5910715111c60af9d804a455471b626c20ded014bb226c7947decd81d07c"
+      #value       = "https://kubernetes.io/flyscan1/hyperspectral/hydrocarbon-detection-quantification/cpp/argus:0.11.0-rc4@sha256:096e5910715111c60af9d804a455471b626c20ded014bb226c7947decd81d07c"
       description = "The hostname (in form of URI) of the Kubernetes API."
     }
     argument {
@@ -38,7 +38,7 @@ resource "scalr_provider_configuration" "kubernetes2" {
 import { isEmpty } from 'lodash-es';
 
 import { ResourceAttributeNode } from '@scalr/react/pages/Workspaces/Runs/dashboard/Pipeline/steps/Plan/VisualPlan/types';
-import { isPlainObject } from '@scalr/react/pages/Workspaces/Runs/dashboard/Pipeline/steps/Plan/VisualPlan/utils/isPlainObject';
+import { isPlainObject } from '@scalr/react/pages/Workspaces/Runs/dashboard/Pipeline/steps/Plan2/VisualPlan/utils/isPlainObject';
 
 import { Colorizer } from './Colorizer';
 import { DiffLine } from './DiffLine';
@@ -65,6 +65,17 @@ export const ObjectNode = (props: ObjectNodeType) => {
 
         return String(value);
     };
+
+    if (!diff) {
+        return [
+            {
+                value: action === 'add' ? currentText : previousText,
+                added: false,
+                removed: false,
+                count: 1,
+            },
+        ];
+    }
 
     const expanderRenderer = (expanded: boolean) => (
         <>
