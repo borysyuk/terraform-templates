@@ -8,7 +8,7 @@ terraform {
 }
 
 resource "scalr_provider_configuration" "kubernetes" {
-  name       = "k8s"
+  name       = "k8s33"
 
   custom {
     provider_name = "kubernetes"
@@ -28,7 +28,7 @@ resource "scalr_provider_configuration" "kubernetes" {
 
 
 resource "scalr_provider_configuration" "kubernetes2" {
-  name       = "k8s2"
+  name       = "k8s2222"
 
   custom {
     provider_name = "kubernetes2"
