@@ -28,7 +28,7 @@ resource "scalr_provider_configuration" "kubernetes" {
 
 
 resource "scalr_provider_configuration" "kubernetes2" {
-  name       = "k8s"
+  name       = "k8s2"
 
   custom {
     provider_name = "kubernetes2"
