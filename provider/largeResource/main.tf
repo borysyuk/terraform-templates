@@ -7,6 +7,24 @@ terraform {
   required_version = ">= 1.4"
 }
 
+variable "revision" {
+  description = "Bump between runs. Every payload is derived from it, so the value changes in place."
+  type        = string
+  default     = "1"
+}
+
+variable "resource_count" {
+  description = "How many payload resources. Keep at 1 to isolate a single diff."
+  type        = number
+  default     = 1
+}
+
+variable "payload_kb" {
+  description = "Size in KB of the changing `public` string. This is the knob for the UI issue."
+  type        = number
+  default     = 128
+}
+
 locals {
   # range() caps at 1024, so the chunks are generated as a nested loop.
   chunks = ceil(var.payload_kb * 1024 / 88)
