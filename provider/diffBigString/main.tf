@@ -35,45 +35,39 @@ resource "scalr_provider_configuration" "kubernetes2" {
     argument {
         name = "longText"
         value = <<EOT
-import { isEmpty } from 'lodash-es';
+import { Fragment, useMemo } from 'react';
+import { diffWordsWithSpace } from 'diff';
 
-import { ResourceAttributeNode } from '@scalr/react/pages/Workspaces/Runs/dashboard/Pipeline/steps/Plan/VisualPlan/types';
-import { isPlainObject } from '@scalr/react/pages/Workspaces/Runs/dashboard/Pipeline/steps/Plan2/VisualPlan/utils/isPlainObject';
+import { AttributeValueType } from '@scalr/react/pages/Workspaces/Runs/dashboard/Pipeline/steps/Plan/VisualPlan/types';
+import { formatValue } from '@scalr/react/pages/Workspaces/Runs/dashboard/Pipeline/steps/Plan/VisualPlan/utils/formatValue';
+import { classNames } from '@scalr/react/utils/classNames';
 
-import { Colorizer } from './Colorizer';
-import { DiffLine } from './DiffLine';
+type HighlightPropsType = {
+    action: 'add' | 'delete';
+    value?: AttributeValueType;
+    previousValue?: AttributeValueType;
+};
 
-import { MoreExpandButton } from './MoreExpandButton';
-import { ObjectNodeDetails } from './ObjectNodeDetails';
-import { Offset } from './Offset';
-
-export const ObjectNode = (props: ObjectNodeType) => {
-    const { node, deep } = props;
-    const { action, attributeName, value, type } = node;
-
-    const expanderRenderer = (expanded: boolean) => (
-        <>
-            {!isEmpty(value) && expanded && (
-                <>
-                    <ObjectNodeDetails node={node} deep={deep} />
-
-                    <DiffLine action={action}>
-                    </DiffLine>
-                </>
-            )}
-        </>
-    );
-
+export const HighlightDiff = ({ action, value, previousValue }: HighlightPropsType) => {
+    console.log('previousValue', previousValue?.toString().length);
+    console.log('previousValue', value?.toString().length);
     const chunks = useMemo(() => {
         const previousText = formatValue(previousValue);
         const currentText = formatValue(value);
 
         const diff = diffWordsWithSpace(previousText, currentText, {
-            timeout: 1000
+            //timeout: 1000,
+            maxEditLength: 1000,
         });
 
         if (!diff) {
             return [
+                {
+                    value: action === 'add' ? currentText : previousText,
+                    added: false,
+                    removed: false,
+                    count: 1,
+                },
             ];
         }
 
@@ -83,14 +77,30 @@ export const ObjectNode = (props: ObjectNodeType) => {
     }, [previousValue, value, action]);
 
     return (
-        <GeneralNode
-            valueRenderer={valueRenderer}
-            expanderRenderer={expanderRenderer}
-            expandable={!isEmpty(value)}
-        />
+        <>
+            {chunks.map((chunk, index) => {
+                if (chunk.added || chunk.removed) {
+                    return (
+                        <span
+                            key={`${chunk.value}-${index}`}
+                            className={classNames('visual-plan-highlight-chunk', [
+                                'visual-plan-highlight-chunk-add',
+                                'visual-plan-highlight-chunk-delete',
+                                action === 'add',
+                            ])}
+                        >
+                            {chunk.value}
+                        </span>
+                    );
+                }
+
+                return <Fragment key={`${chunk.value}-${index}`}>{chunk.value}</Fragment>;
+            })}
+        </>
     );
 };
-EOF
-        }
+
+        EOT
     }
+  }
 }
