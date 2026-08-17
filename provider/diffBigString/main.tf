@@ -82,7 +82,6 @@ export const HighlightDiff = ({ action, value, previousValue }: HighlightPropsTy
                 if (chunk.added || chunk.removed) {
                     return (
                         <span
-                            key={${chunk.value}-${index}}
                             className={classNames('visual-plan-highlight-chunk', [
                                 'visual-plan-highlight-chunk-add',
                                 'visual-plan-highlight-chunk-delete',
