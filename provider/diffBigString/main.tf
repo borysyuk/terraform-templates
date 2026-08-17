@@ -90,6 +90,7 @@ export const ObjectNode = (props: ObjectNodeType) => {
         />
     );
 };
+EOF
         }
     }
 }
