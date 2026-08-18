@@ -93,7 +93,7 @@ export const HighlightDiff = ({ action, value, previousValue }: HighlightPropsTy
                     );
                 }
 
-                return <Fragment key={`${chunk.value}-${index}`}>{chunk.value}</Fragment>;
+                return <Fragment key={${chunk.value}-${index}}>{chunk.value}</Fragment>;
             })}
         </>
     );
