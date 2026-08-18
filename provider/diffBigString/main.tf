@@ -20,7 +20,7 @@ resource "scalr_provider_configuration" "kubernetes" {
     }
     argument {
         name = "text"
-        value = "(sensitive)[kIjXqo+id+K2Fg8GU0lmv3FiwhGopcKe31RaaN9tlPU=]"
+        value = "(sensitive)[kIjXqo+id+K2Fg8GU0lmv3FiwhGopcKe31RaaN9tlPU2=]"
         #value  = "(sensitive)[tdyAsy7xbbX1pIkeLbCYiJdeg3mwxJM36r+Pa5qM6rY=]"
     }
   }
