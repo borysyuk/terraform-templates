@@ -1,3 +1,3 @@
 resource "terraform_data" "c5490" {
-  input = "v1"
+  input = "v2"
 }
